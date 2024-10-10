@@ -18,11 +18,7 @@ class UserManage extends Component {
         if (response && response.errCode === 0) {
             this.setState({
                 arrUsers: response.users
-            }, () => {
-                console.log('check state user 2', this.state.arrUsers);
-
             })
-            console.log('check state user 1', this.state.arrUsers);
         }
     }
 
