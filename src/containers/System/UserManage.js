@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss';
-import { getAllUsers, createNewUserService } from '../../services/userService';
+import { getAllUsers, createNewUserService, deleteUserService } from '../../services/userService';
 import ModalUser from './ModalUser';
+import { emitter } from '../../utils/emitter';
 class UserManage extends Component {
 
     constructor(props) {
@@ -49,10 +50,25 @@ class UserManage extends Component {
                 this.setState({
                     isOpenModalUser: false
                 })
+                emitter.emit('Even_clear_modal_data')
             }
 
         } catch (e) {
             console.log(e)
+        }
+    }
+
+    handleDeleteUser = async (user) => {
+        console.log('click delete', user)
+        try {
+            let res = await deleteUserService(user.id);
+            if (res && res.errCode === 0) {
+                await this.getAllUserFromReact();
+
+            }
+            console.log(res)
+        } catch (e) {
+            console.log(e);
         }
     }
     /** Life cycle
@@ -73,7 +89,7 @@ class UserManage extends Component {
                     createNewUser={this.createNewUser}
 
                 />
-                <div className='title text-center'> Manage users with Vuong Nam</div>
+                <div className='title text-center'> Manage users </div>
                 <div className='mx-1'>
                     <button
                         className='btn btn-primary px-3'
@@ -86,7 +102,7 @@ class UserManage extends Component {
                             <tr>
                                 <th>Email</th>
                                 <th>Firstname</th>
-                                <th>lastname</th>
+                                <th>Lastname</th>
                                 <th>Address</th>
                                 <th>Action</th>
                             </tr>
@@ -100,7 +116,7 @@ class UserManage extends Component {
                                         <td>{item.address}</td>
                                         <td>
                                             <button className='btn-edit'><i className='fas fa-pencil-alt'></i></button>
-                                            <button className='btn-delete'><i className='fas fa-trash'></i></button>
+                                            <button className='btn-delete' onClick={() => this.handleDeleteUser(item)}><i className='fas fa-trash'></i></button>
                                         </td>
 
                                     </tr>
