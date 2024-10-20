@@ -1,13 +1,13 @@
 {
     "home-header": {
-        "special": "Major",
-        "finddoctor": "Find Doctor",
-        "facility": "health facility",
-        "select-room": "Select Room",
+        "special": "Specialty",
+        "finddoctor": "Find a Specialist",
+        "facility": "Medical Facility",
+        "select-room": "Choose a Hospital or Clinic",
         "doctor": "Doctor",
-        "select-doctor": "Choose a good doctor",
-        "fee": "Fee",
-        "general": "Genaral Health Check",
+        "select-doctor": "Choose a Good Doctor",
+        "fee": "Check-up Packages",
+        "general": "General Health Check-up",
         "support-lan": "Support"
     },
     "banner": {
