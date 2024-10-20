@@ -3,11 +3,20 @@ import { connect } from 'react-redux';
 import './HomeHeader.scss';
 import logo from '../../assets/images/bookingcare-2020.svg'
 import { FormattedMessage } from 'react-intl';
+import { LANGUAGES } from '../../utils';
+import { changeLanguageApp } from '../../store/actions';
 
 class HomeHeader extends Component {
 
+    changeLanguage = (language) => {
+        this.props.changeLanguageAppRedux(language)
+        // fire redux even : actions
+    }
+
     render() {
-        console.log('check props: ', this.props)
+        let language = this.props.language;
+        console.log('check language', language)
+
         return (
             <React.Fragment>
                 <div className='home-header-container'>
@@ -43,8 +52,8 @@ class HomeHeader extends Component {
 
                         <div className='right-content'>
                             <div className='support'><i className="fas fa-question-circle"></i><FormattedMessage id="home-header.support-lan" /> </div>
-                            <div className='language-vn'>VN</div>
-                            <div className='language-en'>EN</div>
+                            <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}><span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN</span></div>
+                            <div className={language === LANGUAGES.EN ? 'language-en active' : 'language-en'}><span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span></div>
 
                         </div>
 
@@ -76,15 +85,15 @@ class HomeHeader extends Component {
                                 <div className='text-child'><FormattedMessage id="banner.child-3" /></div>
                             </div>
                             <div className='option-child'>
-                                <div className='icon-child'><i class="fas fa-vial"></i></div>
+                                <div className='icon-child'><i className="fas fa-vial"></i></div>
                                 <div className='text-child'><FormattedMessage id="banner.child-4" /></div>
                             </div>
                             <div className='option-child'>
-                                <div className='icon-child'><i class="fas fa-user-md"></i></div>
+                                <div className='icon-child'><i className="fas fa-user-md"></i></div>
                                 <div className='text-child'><FormattedMessage id="banner.child-5" /></div>
                             </div>
                             <div className='option-child'>
-                                <div className='icon-child'><i class="fas fa-id-card-alt"></i></div>
+                                <div className='icon-child'><i className="fas fa-id-card-alt"></i></div>
                                 <div className='text-child'><FormattedMessage id="banner.child-6" /></div>
                             </div>
 
@@ -113,6 +122,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        changeLanguageAppRedux: (language) => dispatch(changeLanguageApp(language))
     };
 };
 

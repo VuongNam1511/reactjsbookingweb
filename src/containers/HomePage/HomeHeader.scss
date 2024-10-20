@@ -17,7 +17,7 @@
 
             .header-logo {
                 // background: url('')center center no-repeat;
-                height: 45px;
+                height: 40px;
                 width: 100%;
                 cursor: pointer;
                 transform: scale(0.5 0.5);
@@ -68,11 +68,21 @@
                 }
             }
 
-            .language-vn {
+            .language-vi {
                 cursor: pointer;
+                opacity: 0.2;
 
                 &.active {
-                    color: orange;
+                    opacity: 1;
+
+                    span {
+
+                        color: orange;
+                    }
+                }
+
+                &:hover {
+                    opacity: 1;
                 }
 
                 // margin: 0 10px;        
@@ -82,9 +92,20 @@
             .language-en {
                 cursor: pointer;
                 margin: 0 10px;
+                opacity: 0.2;
 
                 &.active {
-                    color: blue;
+                    opacity: 1;
+
+                    span {
+
+                        color: blue;
+                    }
+
+                }
+
+                &:hover {
+                    opacity: 1;
                 }
             }
         }
@@ -94,7 +115,7 @@
 .home-header-banner {
     background-image: url(../../assets/images/header-background.jpg);
     // background: url(../../assets/images/header-background.jpg);
-    height: 675px;
+    height: 485px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
