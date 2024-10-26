@@ -50,6 +50,13 @@
 
     }
 
+    &.section-about {
+
+        height: 500px !important;
+        background: #f5f5f5;
+
+    }
+
     .section-body {
 
         .section-customize {
@@ -62,13 +69,62 @@
                 background-size: cover;
                 background-color: #eee;
 
+                //===Specialty===
                 &.section-specialty {
-                    background-image: url(../../assets/specialtyimage/co-xuong-khop.jpg);
+                    background-image: url(../../assets/specialtyimage/co-xuong-khop.png);
+
+                    &.viem-gan {
+                        background-image: url(../../assets/specialtyimage/viem-gan.png);
+                    }
+
+                    &.than-kinh {
+                        background-image: url(../../assets/specialtyimage/than-kinh.png);
+                    }
+
+                    &.tim-mach {
+                        background-image: url(../../assets/specialtyimage/tim-mach.png);
+                    }
+
+                    &.tieu-hoa {
+                        background-image: url(../../assets/specialtyimage/tieu-hoa.png);
+                    }
+
+                    &.ho-hap-phoi {
+                        background-image: url(../../assets/specialtyimage/ho-hap-phoi.png);
+                    }
+
+                    &.suc-khoe-tam-than {
+                        background-image: url(../../assets/specialtyimage/suc-khoe-tam-than.png);
+                    }
                 }
 
+                //===MedicalFacility===
                 &.section-medical-facility {
-                    background-image: url(../../assets/facilityimage/103904-logo-thucuc.png);
+                    background-image: url(../../assets/facilityimage/hung-viet.jpg);
+
+                    &.thu-cuc {
+                        background-image: url(../../assets/facilityimage/thucuc.png);
+                    }
+
+                    &.hiem-muon {
+                        background-image: url(../../assets/facilityimage/hiem-muon.jpg);
+                    }
+
+                    &.an-viet {
+                        background-image: url(../../assets/facilityimage/an-viet.jpg);
+                    }
+
+                    &.viet-duc {
+                        background-image: url(../../assets/facilityimage/viet-duc.jpg);
+                    }
+
+                    &.y-duoc-1 {
+                        background-image: url(../../assets/facilityimage/y-duoc-1.jpg);
+                    }
                 }
+
+
+
 
                 &.section-doctor-otw {
                     background-image: url(../../assets/doctorimage/114430-bshung.jpg);
@@ -77,6 +133,24 @@
                     margin: 0 auto;
                     margin-bottom: 10px;
                     border-radius: 50%;
+
+                    &.bs2 {
+                        background-image: url(../../assets/doctorimage/105401-bsckii-tran-minh-khuyen.jpg);
+                    }
+
+                    &.bs3 {
+                        background-image: url(../../assets/doctorimage/155650-gs-ha-van-quyet.jpg);
+                    }
+
+                    &.bs4 {
+                        background-image: url(../../assets/doctorimage/162528-ban-sao-cua-bs-nguyen-thi-thanh-thuy.jpg);
+                    }
+
+                    &.bs5 {
+                        background-image: url(../../assets/doctorimage/104016-bs-nga.jpg);
+                    }
+
+
 
                 }
 
@@ -142,4 +216,50 @@
             padding: 20px;
         }
     }
+}
+
+.home-footer {
+    text-align: center;
+    padding: 10px;
+    background: #64b9e5;
+
+    a {
+        text-decoration: none;
+    }
+
+    p {
+        color: white;
+    }
+
+}
+
+
+.section-about {
+    padding: 0 100px;
+
+    .section-about-header {
+        padding: 20px 10px;
+        font-size: 20px;
+    }
+
+    .section-about-content {
+        display: flex;
+        gap: 15px;
+        width: 100%;
+
+        .content-left {
+            width: 50%;
+        }
+
+        .content-right {
+            width: 50%;
+
+            p {
+                text-align: justify;
+                font-style: italic;
+            }
+        }
+    }
+
+
 }

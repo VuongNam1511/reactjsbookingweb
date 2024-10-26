@@ -18,31 +18,31 @@ class Specialty extends Component {
                     <div className='section-body'>
                         <Slider {...this.props.settings}>
                             <div className='section-customize'>
-                                <div className='bg-img section-specialty'> </div>
+                                <div className='bg-img section-specialty co-xuong-khop'></div>
                                 <div>Cơ Xương Khớp </div>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-img section-specialty'> </div>
+                                <div className='bg-img section-specialty viem-gan'> </div>
                                 <div>Bệnh Viêm Gan</div>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-img section-specialty'> </div>
+                                <div className='bg-img section-specialty than-kinh'> </div>
                                 <div>Thần Kinh</div>
                             </div >
                             <div className='section-customize'>
-                                <div className='bg-img section-specialty'> </div>
+                                <div className='bg-img section-specialty tim-mach'> </div>
                                 <div>Tim Mạch</div>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-img section-specialty'> </div>
+                                <div className='bg-img section-specialty tieu-hoa'> </div>
                                 <div>Tiêu Hóa</div>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-img section-specialty'> </div>
+                                <div className='bg-img section-specialty ho-hap-phoi'> </div>
                                 <div>Hô Hấp - Phổi</div>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-img section-specialty'> </div>
+                                <div className='bg-img section-specialty suc-khoe-tam-than'> </div>
                                 <div>Sức Khỏe Tâm Thần</div>
                             </div>
 

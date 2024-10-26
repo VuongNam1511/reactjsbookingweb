@@ -20,10 +20,11 @@ class DoctorOfTheWeek extends Component {
                             <div className='section-customize'>
                                 <div className='customize-border'>
                                     <div className='outer-bg'>
-                                        <div className='bg-img section-doctor-otw'> </div>
+                                        <div className='bg-img section-doctor-otw'>
+                                        </div>
                                         <div className='position text-center'>
-                                            <div>Giao sư, Tiến sĩ Cù Trọng Xoay </div>
-                                            <div>Cơ xương khớp 1</div>
+                                            <div>Giáo sư Tiến sĩ Bác sĩ  Nguyễn Duy Hưng </div>
+                                            <div>Da Liễu</div>
                                         </div>
                                     </div>
 
@@ -32,10 +33,10 @@ class DoctorOfTheWeek extends Component {
                             <div className='section-customize'>
                                 <div className='customize-border'>
                                     <div className='outer-bg'>
-                                        <div className='bg-img section-doctor-otw'> </div>
+                                        <div className='bg-img section-doctor-otw bs2'> </div>
                                         <div className='position text-center'>
                                             <div>Giao sư, Tiến sĩ Cù Trọng Xoay </div>
-                                            <div>Cơ xương khớp 1</div>
+                                            <div>Tâm Lí</div>
                                         </div>
                                     </div>
 
@@ -44,10 +45,10 @@ class DoctorOfTheWeek extends Component {
                             <div className='section-customize'>
                                 <div className='customize-border'>
                                     <div className='outer-bg'>
-                                        <div className='bg-img section-doctor-otw'> </div>
+                                        <div className='bg-img section-doctor-otw bs3'> </div>
                                         <div className='position text-center'>
-                                            <div>Giao sư, Tiến sĩ Cù Trọng Xoay </div>
-                                            <div>Cơ xương khớp 1</div>
+                                            <div>Bác sĩ Chuyên khoa II Trần Minh Khuyên </div>
+                                            <div>Sức khỏe tâm thần||Tư vấn trị liệu tâm lí</div>
                                         </div>
                                     </div>
 
@@ -56,10 +57,10 @@ class DoctorOfTheWeek extends Component {
                             <div className='section-customize'>
                                 <div className='customize-border'>
                                     <div className='outer-bg'>
-                                        <div className='bg-img section-doctor-otw'> </div>
+                                        <div className='bg-img section-doctor-otw bs4'> </div>
                                         <div className='position text-center'>
-                                            <div>Giao sư, Tiến sĩ Cù Trọng Xoay </div>
-                                            <div>Cơ xương khớp 1</div>
+                                            <div>Tiến sĩ Bác sĩ Bùi Thị Phương Nga </div>
+                                            <div>Sản phụ khoa</div>
                                         </div>
                                     </div>
 
@@ -68,42 +69,15 @@ class DoctorOfTheWeek extends Component {
                             <div className='section-customize'>
                                 <div className='customize-border'>
                                     <div className='outer-bg'>
-                                        <div className='bg-img section-doctor-otw'> </div>
+                                        <div className='bg-img section-doctor-otw bs5'> </div>
                                         <div className='position text-center'>
-                                            <div>Giao sư, Tiến sĩ Cù Trọng Xoay </div>
-                                            <div>Cơ xương khớp 1</div>
+                                            <div>Giao sư, Tiến sĩ Hà Văn Quyết </div>
+                                            <div>Tiêu hóa-Bệnh Viêm Gan</div>
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
-                            <div className='section-customize'>
-                                <div className='customize-border'>
-                                    <div className='outer-bg'>
-                                        <div className='bg-img section-doctor-otw'> </div>
-                                        <div className='position text-center'>
-                                            <div>Giao sư, Tiến sĩ Cù Trọng Xoay </div>
-                                            <div>Cơ xương khớp 1</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div className='section-customize'>
-                                <div className='customize-border'>
-                                    <div className='outer-bg'>
-                                        <div className='bg-img section-doctor-otw'> </div>
-                                        <div className='position text-center'>
-                                            <div>Giao sư, Tiến sĩ Cù Trọng Xoay </div>
-                                            <div>Cơ xương khớp 1</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-
 
 
                         </Slider>
