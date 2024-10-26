@@ -101,6 +101,8 @@
                 //===MedicalFacility===
                 &.section-medical-facility {
                     background-image: url(../../assets/facilityimage/hung-viet.jpg);
+                    background-size: contain !important;
+                    background-color: white !important;
 
                     &.thu-cuc {
                         background-image: url(../../assets/facilityimage/thucuc.png);
