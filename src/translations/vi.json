@@ -46,7 +46,7 @@
         "address": "Địa chỉ",
         "gender": "Giới tính",
         "position": "Chức danh",
-        "roleId": "vai trò",
+        "roleId": "Vai trò",
         "image": "Ảnh",
         "save": "Lưu"
     }
