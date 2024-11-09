@@ -201,7 +201,7 @@ class UserRedux extends Component {
             address: user.address,
             gender: user.gender,
             role: user.roleId,
-            position: user.position,
+            position: user.positionId,
             avatar: '',
             previewImgUrl: imageBase64,
             action: CRUD_ACTIONS.EDIT,
