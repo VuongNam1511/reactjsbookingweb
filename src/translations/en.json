@@ -48,6 +48,7 @@
         "position": "Position",
         "roleId": "Role Id",
         "image": "Image",
-        "save": "Save"
+        "save": "Save",
+        "edit": "Edit user"
     }
 }

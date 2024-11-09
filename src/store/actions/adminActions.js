@@ -1,5 +1,5 @@
 import actionTypes from './actionTypes';
-import { getAllCodeService, createNewUserService, getAllUsers, deleteUserService } from '../../services/userService';
+import { getAllCodeService, createNewUserService, getAllUsers, deleteUserService, editUserService } from '../../services/userService';
 import { toast } from 'react-toastify';
 // export const fetchGenderStart = () => ({
 //     type: actionTypes.FETCH_GENDER_START
@@ -92,6 +92,7 @@ export const fetchRoleFailed = () => ({
 })
 
 //===CRUD===
+//CREATE
 export const createNewUser = (data) => {
     return async (dispatch, getState) => {
         try {
@@ -120,6 +121,8 @@ export const saveUserFailed = () => ({
     type: actionTypes.CREATE_USER_FAILED
 })
 
+
+//READ
 export const fetchAllUsersStart = () => {
 
     return async (dispatch, getState) => {
@@ -151,7 +154,39 @@ export const fetchAllUsersFailed = () => ({
     type: actionTypes.FETCH_ALL_USER_FAILED,
 })
 
+//Update
+export const editAUser = (data) => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await editUserService(data);
+            console.log('check Update user form Redux: ', res)
+            if (res && res.errCode === 0) {
+                toast.success("Update a user Successed");
+                dispatch(editUserSuccess());
+                dispatch(fetchAllUsersStart());
+            } else {
+                toast.error("Update a user failed");
+                dispatch(editUserFailed());
+            }
+        } catch (e) {
+            toast.error("Update a user failed");
+            dispatch(editUserFailed());
+            console.log('updateUserFailed error', e)
+        }
 
+    }
+}
+
+export const editUserSuccess = () => ({
+    type: actionTypes.EDIT_USER_SUCCESS
+})
+
+export const editUserFailed = () => ({
+    type: actionTypes.EDIT_USER_FAILED
+})
+
+
+//DELETE
 export const deleteAUser = (userId) => {
     return async (dispatch, getState) => {
         try {
