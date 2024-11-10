@@ -2,11 +2,31 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import Slider from "react-slick";
-
-
+import * as actions from '../../../store/actions';
+import { iteratee } from 'lodash';
+import { LANGUAGES } from '../../../utils';
 class DoctorOfTheWeek extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            arrDoctors: []
+        }
+    }
 
+    componentDidUpdate(prevPops, prevState, snapshot) {
+        if (prevPops.topDoctorsDedux !== this.props.topDoctorsDedux) {
+            this.setState({
+                arrDoctors: this.props.topDoctorsDedux
+            })
+        }
+    }
+    componentDidMount() {
+        this.props.loadTopDoctors();
+    }
     render() {
+        let arrDoctors = this.state.arrDoctors;
+        let { language } = this.props;
+        arrDoctors = arrDoctors.concat(arrDoctors).concat(arrDoctors)
 
         return (
             <div className='section-share section-doctor-otw '>
@@ -17,68 +37,31 @@ class DoctorOfTheWeek extends Component {
                     </div>
                     <div className='section-body'>
                         <Slider {...this.props.settings}>
-                            <div className='section-customize'>
-                                <div className='customize-border'>
-                                    <div className='outer-bg'>
-                                        <div className='bg-img section-doctor-otw'>
-                                        </div>
-                                        <div className='position text-center'>
-                                            <div>Giáo sư Tiến sĩ Bác sĩ  Nguyễn Duy Hưng </div>
-                                            <div>Da Liễu</div>
-                                        </div>
-                                    </div>
 
-                                </div>
-                            </div>
-                            <div className='section-customize'>
-                                <div className='customize-border'>
-                                    <div className='outer-bg'>
-                                        <div className='bg-img section-doctor-otw bs2'> </div>
-                                        <div className='position text-center'>
-                                            <div>Giao sư, Tiến sĩ Cù Trọng Xoay </div>
-                                            <div>Tâm Lí</div>
-                                        </div>
-                                    </div>
+                            {arrDoctors && arrDoctors.length > 0 && arrDoctors.map((item, index) => {
+                                let imageBase64 = '';
+                                if (item.image) {
+                                    imageBase64 = new Buffer(item.image, 'base64').toString('binary');
+                                }
+                                let nameVi = `${item.positionData.valueVi}, ${item.lastName} ${item.firstName} `
+                                let nameEn = `${item.positionData.valueEn}, ${item.lastName} ${item.firstName} `
+                                return (
+                                    <div className='section-customize' key={index}>
+                                        <div className='customize-border'>
+                                            <div className='outer-bg'>
+                                                <div className='bg-img section-doctor-otw' style={{ backgroundImage: `url(${imageBase64})` }}>
+                                                </div>
+                                                <div className='position text-center'>
+                                                    <div>{language === LANGUAGES.VI ? nameVi : nameEn}</div>
+                                                    <div>Da Liễu</div>
+                                                </div>
+                                            </div>
 
-                                </div>
-                            </div>
-                            <div className='section-customize'>
-                                <div className='customize-border'>
-                                    <div className='outer-bg'>
-                                        <div className='bg-img section-doctor-otw bs3'> </div>
-                                        <div className='position text-center'>
-                                            <div>Bác sĩ Chuyên khoa II Trần Minh Khuyên </div>
-                                            <div>Sức khỏe tâm thần||Tư vấn trị liệu tâm lí</div>
                                         </div>
                                     </div>
-
-                                </div>
-                            </div>
-                            <div className='section-customize'>
-                                <div className='customize-border'>
-                                    <div className='outer-bg'>
-                                        <div className='bg-img section-doctor-otw bs4'> </div>
-                                        <div className='position text-center'>
-                                            <div>Tiến sĩ Bác sĩ Bùi Thị Phương Nga </div>
-                                            <div>Sản phụ khoa</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div className='section-customize'>
-                                <div className='customize-border'>
-                                    <div className='outer-bg'>
-                                        <div className='bg-img section-doctor-otw bs5'> </div>
-                                        <div className='position text-center'>
-                                            <div>Giao sư, Tiến sĩ Hà Văn Quyết </div>
-                                            <div>Tiêu hóa-Bệnh Viêm Gan</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
+                                )
+                            })
+                            }
 
                         </Slider>
                     </div>
@@ -92,12 +75,15 @@ class DoctorOfTheWeek extends Component {
 
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.user.isLoggedIn
+        isLoggedIn: state.user.isLoggedIn,
+        topDoctorsDedux: state.admin.topDoctors,
+        language: state.app.language
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
+        loadTopDoctors: () => dispatch(actions.fetchTopDoctor())
     };
 };
 
