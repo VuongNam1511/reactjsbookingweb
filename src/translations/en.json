@@ -50,5 +50,9 @@
         "image": "Image",
         "save": "Save",
         "edit": "Edit user"
+    },
+    "homepage": {
+        "doctor-of-the-week": "Doctor of the week",
+        "more-infor": "More Information"
     }
 }

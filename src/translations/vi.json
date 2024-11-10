@@ -50,5 +50,9 @@
         "image": "Ảnh",
         "save": "Lưu",
         "edit": "Lưu thay đổi"
+    },
+    "homepage": {
+        "doctor-of-the-week": "Bác Sĩ Nổi Bật Tuần Qua",
+        "more-infor": "xem Thêm..."
     }
 }
