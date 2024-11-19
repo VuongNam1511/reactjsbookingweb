@@ -12,7 +12,7 @@ import './ManageDoctor.scss'
 import Select from 'react-select';
 import { LANGUAGES } from '../../../utils';
 import { iteratee } from 'lodash';
-import { saveDetailDotor } from '../../../services/userService';
+import { saveDetailDoctor } from '../../../services/userService';
 
 
 // Register plugins if required
@@ -78,7 +78,7 @@ class ManageDoctor extends Component {
     }
 
     handleSaveContentMarkdown = () => {
-        this.props.saveDetailDotor({
+        this.props.saveDetailDoctor({
             contentHTML: this.state.contentHTML,
             contentMarkdown: this.state.contentMarkdown,
             description: this.state.description,
@@ -148,7 +148,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchAllDoctors: (id) => dispatch(actions.fetchAllDoctors()),
-        saveDetailDotor: (data) => dispatch(actions.saveDetailDotor(data))
+        saveDetailDoctor: (data) => dispatch(actions.saveDetailDoctor(data))
     };
 };
 

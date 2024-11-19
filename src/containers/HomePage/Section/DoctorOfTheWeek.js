@@ -5,6 +5,8 @@ import Slider from "react-slick";
 import * as actions from '../../../store/actions';
 import { iteratee } from 'lodash';
 import { LANGUAGES } from '../../../utils';
+import { withRouter } from 'react-router';
+
 class DoctorOfTheWeek extends Component {
     constructor(props) {
         super(props)
@@ -23,6 +25,13 @@ class DoctorOfTheWeek extends Component {
     componentDidMount() {
         this.props.loadTopDoctors();
     }
+
+    handleViewDetailDoctor = (doctor) => {
+        console.log('check view infor : ', doctor)
+        this.props.history.push(`/detail-doctor/${doctor.id}`)
+
+    }
+
     render() {
         let arrDoctors = this.state.arrDoctors;
         let { language } = this.props;
@@ -50,7 +59,7 @@ class DoctorOfTheWeek extends Component {
                                 let nameVi = `${item.positionData.valueVi}, ${item.lastName} ${item.firstName} `
                                 let nameEn = `${item.positionData.valueEn}, ${item.lastName} ${item.firstName} `
                                 return (
-                                    <div className='section-customize' key={index}>
+                                    <div className='section-customize' key={index} onClick={() => this.handleViewDetailDoctor(item)}>
                                         <div className='customize-border'>
                                             <div className='outer-bg'>
                                                 <div className='bg-img section-doctor-otw' style={{ backgroundImage: `url(${imageBase64})` }}>
@@ -91,4 +100,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DoctorOfTheWeek);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(DoctorOfTheWeek));

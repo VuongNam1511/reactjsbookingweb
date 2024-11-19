@@ -2,7 +2,7 @@ import actionTypes from './actionTypes';
 import {
     getAllCodeService, createNewUserService, getAllUsers,
     deleteUserService, editUserService, getTopDoctorHomeService,
-    getAllDoctors, saveDetailDotorService
+    getAllDoctors, saveDetailDoctorService
 } from '../../services/userService';
 import { toast } from 'react-toastify';
 // export const fetchGenderStart = () => ({
@@ -274,10 +274,10 @@ export const fetchAllDoctors = () => {
 
 
 //save doctor
-export const saveDetailDotor = (data) => {
+export const saveDetailDoctor = (data) => {
     return async (dispatch, getState) => {
         try {
-            let res = await saveDetailDotorService(data);
+            let res = await saveDetailDoctorService(data);
             if (res && res.errCode === 0) {
                 toast.success("Save Doctor Infor Successed");
 
