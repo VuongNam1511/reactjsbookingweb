@@ -57,5 +57,11 @@
     "homepage": {
         "doctor-of-the-week": "Bác Sĩ Nổi Bật Tuần Qua",
         "more-infor": "xem Thêm..."
+    },
+    "manage-schedule": {
+        "title": "Quản lí kế hoạch khám bệnh của bác sĩ",
+        "choose-doctor": "Chọn bác sĩ",
+        "choose-date": "Chọn ngày",
+        "save-schedule-infor": "Lưu thông tin"
     }
 }

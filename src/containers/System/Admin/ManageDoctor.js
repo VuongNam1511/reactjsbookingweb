@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import './TableManageUser.scss';
 import UserRedux from './UserRedux';
 import * as actions from '../../../store/actions'
-
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
 import 'react-markdown-editor-lite/lib/index.css';
@@ -167,14 +166,13 @@ class ManageDoctor extends Component {
 const mapStateToProps = state => {
     return {
         language: state.app.language,
-
         allDoctors: state.admin.allDoctors
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchAllDoctors: (id) => dispatch(actions.fetchAllDoctors()),
+        fetchAllDoctors: () => dispatch(actions.fetchAllDoctors()),
         saveDetailDoctor: (data) => dispatch(actions.saveDetailDoctor(data))
     };
 };
