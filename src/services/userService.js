@@ -52,8 +52,12 @@ const getDetailInforDoctor = (inputId) => {
 
 }
 
+const savePulkScheduleDoctor = (data) => {
+    return axios.post('/api/bulk-create-schedule', data)
+}
+
 export {
     handleLoginApi, getAllUsers, createNewUserService, deleteUserService, editUserService,
     getAllCodeService, getTopDoctorHomeService, getAllDoctors, saveDetailDoctorService,
-    getDetailInforDoctor,
+    getDetailInforDoctor, savePulkScheduleDoctor
 }
