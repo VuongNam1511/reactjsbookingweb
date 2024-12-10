@@ -6,7 +6,7 @@ import Select from 'react-select';
 import * as actions from '../../../store/actions'
 import { CRUD_ACTIONS, LANGUAGES, dateFormat } from '../../../utils';
 import DatePicker from '../../../components/Input/DatePicker';
-import moment, { lang } from 'moment';
+import moment from 'moment';
 import { toast } from 'react-toastify';
 import _ from 'lodash';
 import { savePulkScheduleDoctor } from '../../../services/userService';
@@ -133,14 +133,21 @@ class ManageSchedule extends Component {
             doctorId: selectedDoctor.value,
             formatedDate: formatedDate
         })
-        console.log('check result savePulkScheduleDoctor: ', res)
 
-        console.log('check result: ', result)
+        if (res && res.errCode === 0) {
+            toast.success("save Infor Successed ")
+        } else {
+            toast.error("error saveBulkScheduleDoctor");
+            console.log("error saveBulkScheduleDoctor >>> res: ", res)
+        }
+
     }
 
     render() {
         let { rangeTime } = this.state;
         let { language } = this.props;
+        let yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
+
         return (
             <div className='manage-schedule-container'>
                 <div className="m-s-title">
@@ -168,7 +175,7 @@ class ManageSchedule extends Component {
                                 onChange={this.handleOnchangeDatePicker}
                                 className='form-control'
                                 value={this.state.currentDate}
-                                minDate={new Date()}
+                                minDate={yesterday}
                             />
                         </div>
                         <div className='col-12 pick-hour-container'>
