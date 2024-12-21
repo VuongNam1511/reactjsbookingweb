@@ -78,7 +78,13 @@
             "select-doctor": "Select doctor",
             "introduction": "Introduction",
             "add": "Create infor",
-            "save": "Save infor"
+            "save": "Save infor",
+            "price": "Medical examination price ",
+            "payment": "Payment method",
+            "province": "Province",
+            "nameclinic": "Clinic name",
+            "addressClinic": "Clinic address",
+            "note": "Note"
         }
     }
 }
