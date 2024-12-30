@@ -150,7 +150,7 @@ class ManageDoctor extends Component {
             addressClinic: this.state.addressClinic,
             note: this.state.note
         })
-        console.log('check state: ', this.state)
+        // console.log('check state: ', this.state)
     }
 
     handleChangeSelect = async (selectedOption) => {
@@ -232,7 +232,7 @@ class ManageDoctor extends Component {
     }
     render() {
         let { hasOldData } = this.state;
-        console.log('check state from #80: ', this.state)
+        // console.log('check state from #80: ', this.state)
         return (
             <div className='manage-doctor-container'>
                 <div className='manage-doctor-title'>

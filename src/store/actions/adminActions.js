@@ -101,7 +101,7 @@ export const createNewUser = (data) => {
     return async (dispatch, getState) => {
         try {
             let res = await createNewUserService(data);
-            console.log('check create user form Redux: ', res)
+            // console.log('check create user form Redux: ', res)
             if (res && res.errCode === 0) {
                 toast.success("Created a new user Successed");
                 dispatch(saveUserSuccess());
@@ -163,7 +163,7 @@ export const editAUser = (data) => {
     return async (dispatch, getState) => {
         try {
             let res = await editUserService(data);
-            console.log('check Update user form Redux: ', res)
+            // console.log('check Update user form Redux: ', res)
             if (res && res.errCode === 0) {
                 toast.success("Update a user Successed");
                 dispatch(editUserSuccess());
@@ -195,7 +195,7 @@ export const deleteAUser = (userId) => {
     return async (dispatch, getState) => {
         try {
             let res = await deleteUserService(userId);
-            console.log('check create user form Redux: ', res)
+            // console.log('check create user form Redux: ', res)
             if (res && res.errCode === 0) {
                 toast.success("deleted a user Successed");
                 dispatch(deleteUserSuccess());

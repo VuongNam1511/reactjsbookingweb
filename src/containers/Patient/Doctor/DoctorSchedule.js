@@ -96,7 +96,7 @@ class DoctorSchedule extends Component {
                 })
             }
 
-            console.log('check res from #75', res)
+            // console.log('check res from #75', res)
         }
     }
     render() {

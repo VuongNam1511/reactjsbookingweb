@@ -70,6 +70,13 @@
             "no-schedule": "The doctor is currently not available for consultation during this time period, please choose a consultation appointment at another time!",
             "choose": "Choose ",
             "book-free": " and book (free)"
+        },
+        "extra-infor-doctor": {
+            "text-address": "Medical examination address",
+            "price": "Price: ",
+            "show-more": "Show more",
+            "payment": "Patients can pay in the form of: ",
+            "hidepayment": "Hide payment"
         }
     },
     "admin": {

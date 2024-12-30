@@ -1,5 +1,6 @@
 .doctor-extra-infor-container {
     margin-left: 15px;
+    width: 75%;
 
     .content-up {
         margin-bottom: 10px;
@@ -27,6 +28,11 @@
             span {
                 cursor: pointer;
                 color: rgb(38, 160, 231);
+            }
+
+            .currency {
+                margin: 0 5px;
+                color: #333;
             }
         }
 

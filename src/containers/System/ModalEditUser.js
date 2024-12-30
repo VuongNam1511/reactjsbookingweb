@@ -52,7 +52,7 @@ class ModalEditUser extends Component {
         let isValid = true
         let arrInput = ['email', 'password', 'firstName', 'lastName', 'address'];
         for (let i = 0; i < arrInput.length; i++) {
-            console.log('check loop', this.state[arrInput[i]], arrInput[i])
+            // console.log('check loop', this.state[arrInput[i]], arrInput[i])
             if (!this.state[arrInput[i]]) {
                 isValid = false;
                 alert('Missing Parameter: ' + arrInput[i]);

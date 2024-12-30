@@ -38,7 +38,7 @@ class DetailDoctor extends Component {
     }
 
     render() {
-        console.log('check state', this.state)
+        // console.log('check state', this.state)
         let { language } = this.props;
         let { detailDoctor } = this.state;
         let nameVi = '', nameEn = '';
@@ -67,10 +67,9 @@ class DetailDoctor extends Component {
                                         </span>
                                     }
                                 </div>
-
                             </div>
-
                         </div>
+
                         <div className='schedule-doctor'>
                             <div className='content-left'>
                                 <DoctorSchedule
@@ -81,19 +80,15 @@ class DetailDoctor extends Component {
                             <div className='content-right'>
                                 <DoctorExtraInfor
                                     doctorIdFromParent={this.state.currentDoctorId}
-
                                 />
                             </div>
                         </div>
-                        <div className='detail-infor-doctor'>
 
+                        <div className='detail-infor-doctor'>
                             {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML
                                 &&
-                                <div dangerouslySetInnerHTML={{ __html: detailDoctor.Markdown.contentHTML }}>
-
-                                </div>
+                                <div dangerouslySetInnerHTML={{ __html: detailDoctor.Markdown.contentHTML }}></div>
                             }
-
                         </div>
 
                         <div className='comment-doctor'>

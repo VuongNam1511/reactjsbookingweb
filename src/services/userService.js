@@ -10,7 +10,7 @@ const getAllUsers = (inputId) => {
 }
 
 const createNewUserService = (data) => {
-    console.log('check data from service: ', data)
+    // console.log('check data from service: ', data)
     return axios.post('api/create-new-user', data)
 }
 
@@ -60,8 +60,13 @@ const getScheduleDoctorByDate = (doctorId, date) => {
     return axios.get(`/api/get-schedule-doctor-by-date?doctorId=${doctorId}&date=${date}`)
 }
 
+const getExtraInforDoctorById = (doctorId) => {
+    return axios.get(`/api/get-extra-infor-doctor-by-id?doctorId=${doctorId}`)
+}
+
 export {
     handleLoginApi, getAllUsers, createNewUserService, deleteUserService, editUserService,
     getAllCodeService, getTopDoctorHomeService, getAllDoctors, saveDetailDoctorService,
-    getDetailInforDoctor, savePulkScheduleDoctor, getScheduleDoctorByDate
+    getDetailInforDoctor, savePulkScheduleDoctor, getScheduleDoctorByDate,
+    getExtraInforDoctorById
 }
