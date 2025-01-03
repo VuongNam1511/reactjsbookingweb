@@ -3,6 +3,9 @@ import { connect } from "react-redux";
 import './BookingModal.scss';
 import { FormattedMessage } from 'react-intl';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import ProfileDoctor from '../ProfileDoctor';
+import { getProfileDoctorById } from '../../../../services/userService';
+import _ from 'lodash';
 
 //Cấu trúc của 1 class Component của React:
 class BookingModal extends Component {
@@ -25,7 +28,13 @@ class BookingModal extends Component {
     }
 
     render() {
-        let { isOpenModal, closeBookingModal, dataTime } = this.props
+        let { isOpenModal, closeBookingModal, dataTime } = this.props;
+        let doctorId = '';
+        if (dataTime && !_.isEmpty(dataTime)) {
+            doctorId = dataTime.doctorId
+        }
+
+        console.log('check data time: ', dataTime)
         return (
             <Modal
                 isOpen={isOpenModal}
@@ -41,11 +50,12 @@ class BookingModal extends Component {
                     <div className='booking-modal-body'>
                         {/* {JSON.stringify(dataTime)} */}
                         <div className='doctor-infor'>
-
+                            <ProfileDoctor
+                                doctorId={doctorId}
+                            />
                         </div>
-                        <div className='price'>
-                            Giá khám 500.000 VND
-                        </div>
+                        {/* <div className='price'>
+                        </div> */}
                         <div className='row'>
                             <div className='col-6 form-group'>
                                 <label>Họ tên</label>
