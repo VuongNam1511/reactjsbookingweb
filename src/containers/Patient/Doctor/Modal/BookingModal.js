@@ -13,6 +13,8 @@ import { LANGUAGES } from '../../../../utils';
 import Select from 'react-select';
 import { postPatientBookingAppointment } from '../../../../services/userService';
 import { toast } from 'react-toastify';
+import moment from 'moment';
+
 
 //Cấu trúc của 1 class Component của React:
 class BookingModal extends Component {
@@ -51,7 +53,6 @@ class BookingModal extends Component {
         return result;
     }
 
-
     async componentDidUpdate(prevPops, prevState, snapshot) { //viết trong componentDidUpdate thì react sẽ giúp phân biệt có sự thay đổi của props
         if (this.props.language !== prevPops.language) {
             this.setState({
@@ -84,7 +85,6 @@ class BookingModal extends Component {
         })
     }
 
-
     handleOnchangeDatePicker = (date) => {
         this.setState({
             birthDay: date[0]
@@ -96,11 +96,45 @@ class BookingModal extends Component {
 
     }
 
+    buildTimeBooking = (dataTime) => {
+        let { language } = this.props;
+        if (dataTime && !_.isEmpty(dataTime)) {
+
+            let time = language === LANGUAGES.VI ?
+                dataTime.timeTypeData.valueVi : dataTime.timeTypeData.valueEn;
+            let date = language === LANGUAGES.VI ?
+                moment.unix(+dataTime.date / 1000).format('dddd - DD/MM/YYYY')//convert dữ liệu + đưa đơn vị thời gian từ ms về s /1000
+                :
+                moment.unix(+dataTime.date / 1000).locale('en').format('ddd - MM/DD/YYYY')//convert dữ liệu + đưa đơn vị thời gian từ ms về s /1000
+
+            return `${time} - ${date}`
+        }
+        return ''
+    }
+
+    buildDoctorName = (dataTime) => {
+        let { language } = this.props;
+        if (dataTime && !_.isEmpty(dataTime)) {
+            let name = language === LANGUAGES.VI
+                ?
+                `${dataTime.doctorData.lastName} ${dataTime.doctorData.firstName}`
+                :
+                `${dataTime.doctorData.firstName} ${dataTime.doctorData.lastName}`
+
+
+            return name;
+        }
+        return ''
+    }
+
+
     handleConfirmBooking = async () => {
         //validate input
         //if (!data.email || !data.doctorId || !data.timeType || !data.date) {
 
         let date = new Date(this.state.birthDay).getTime();
+        let timeString = this.buildTimeBooking(this.props.dataTime);
+        let doctorName = this.buildDoctorName(this.props.dataTime);
 
         let res = await postPatientBookingAppointment({
             fullName: this.state.fullName,
@@ -112,6 +146,9 @@ class BookingModal extends Component {
             selectedGender: this.state.selectedGender.value,
             doctorId: this.state.doctorId,
             timeType: this.state.timeType,
+            language: this.props.language,
+            timeString: timeString,
+            doctorName: doctorName,
         })
 
         if (res && res.errCode === 0) {
@@ -130,6 +167,7 @@ class BookingModal extends Component {
             doctorId = dataTime.doctorId
         }
 
+        console.log('check dataTime: ', dataTime)
         return (
             <Modal
                 isOpen={isOpenModal}
