@@ -56,7 +56,8 @@
     },
     "homepage": {
         "doctor-of-the-week": "Doctor of the week",
-        "more-infor": "More Information"
+        "more-infor": "More Infor...",
+        "specialty-popular": "Popular Specialties"
     },
     "manage-schedule": {
         "title": "Manage doctor's examination plan",

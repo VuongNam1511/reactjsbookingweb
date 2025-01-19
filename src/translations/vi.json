@@ -56,7 +56,8 @@
     },
     "homepage": {
         "doctor-of-the-week": "Bác Sĩ Nổi Bật Tuần Qua",
-        "more-infor": "xem Thêm..."
+        "more-infor": "xem Thêm...",
+        "specialty-popular": "Chuyên Khoa Phổ Biến"
     },
     "manage-schedule": {
         "title": "Quản lí kế hoạch khám bệnh của bác sĩ",
