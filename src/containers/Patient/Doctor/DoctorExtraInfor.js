@@ -17,12 +17,19 @@ class DoctorExtraInfor extends Component {
     }
 
     async componentDidMount() {
-
+        if (this.props.doctorIdFromParent) {
+            let res = await getExtraInforDoctorById(this.props.doctorIdFromParent);
+            if (res && res.errCode === 0) {
+                this.setState({
+                    extraInfor: res.data
+                })
+            }
+        }
     }
 
 
 
-    async componentDidUpdate(prevPops, prevState, snapshot) { //viết trong componentDidUpdate thì react sẽ giúp phân biệt cso sự thay đổi của props
+    async componentDidUpdate(prevPops, prevState, snapshot) { //viết trong componentDidUpdate thì react sẽ giúp phân biệt có sự thay đổi của props
         if (this.props.language !== prevPops.language) {
 
         }
@@ -32,7 +39,6 @@ class DoctorExtraInfor extends Component {
                 this.setState({
                     extraInfor: res.data
                 })
-
             }
         }
     }

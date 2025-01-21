@@ -6,6 +6,7 @@ import { getDetailInforDoctor } from '../../../services/userService'
 import { LANGUAGES } from '../../../utils';
 import DoctorSchedule from './DoctorSchedule';
 import DoctorExtraInfor from './DoctorExtraInfor';
+
 class DetailDoctor extends Component {
     constructor(props) {
         super(props);
