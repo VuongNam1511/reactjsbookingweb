@@ -81,29 +81,10 @@
 
                 //===MedicalFacility===
                 &.section-medical-facility {
-                    background-image: url(../../assets/facilityimage/hung-viet.jpg);
+                    // background-image: url(../../assets/facilityimage/hung-viet.jpg);
                     background-size: contain !important;
                     background-color: white !important;
 
-                    &.thu-cuc {
-                        background-image: url(../../assets/facilityimage/thucuc.png);
-                    }
-
-                    &.hiem-muon {
-                        background-image: url(../../assets/facilityimage/hiem-muon.jpg);
-                    }
-
-                    &.an-viet {
-                        background-image: url(../../assets/facilityimage/an-viet.jpg);
-                    }
-
-                    &.viet-duc {
-                        background-image: url(../../assets/facilityimage/viet-duc.jpg);
-                    }
-
-                    &.y-duoc-1 {
-                        background-image: url(../../assets/facilityimage/y-duoc-1.jpg);
-                    }
                 }
 
 
