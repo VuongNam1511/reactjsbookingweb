@@ -105,11 +105,15 @@ const getAllPatientForDoctor = (data) => {
     return axios.get(`/api/get-list-patient-for-doctor?doctorId=${data.doctorId}&date=${data.date}`)
 }
 
+const postSendRemery = (data) => {
+    return axios.post('/api/send-remedy', data)
+}
+
 export {
     handleLoginApi, getAllUsers, createNewUserService, deleteUserService, editUserService,
     getAllCodeService, getTopDoctorHomeService, getAllDoctors, saveDetailDoctorService,
     getDetailInforDoctor, savePulkScheduleDoctor, getScheduleDoctorByDate,
     getExtraInforDoctorById, getProfileDoctorById, postPatientBookingAppointment,
     postVerifyBookAppointment, createNewSpecialty, getAllSpecialty, getDetailSpecialtyById,
-    createNewClinic, getAllClinic, getDetailClinicById, getAllPatientForDoctor
+    createNewClinic, getAllClinic, getDetailClinicById, getAllPatientForDoctor, postSendRemery
 }
