@@ -14,7 +14,7 @@
     "banner": {
         "title-1": "MEDICIAL FOUNDATION",
         "title-2": "COMPREHENSIVE HEALTH CARE",
-        "child-1": "Specialized Examination",
+        "child-1": "Specialized ",
         "child-2": "Medical Facility",
         "child-3": "Doctor",
         "child-4": "Handbook"
@@ -25,7 +25,7 @@
             "manage-doctor": "Manage Doctors",
             "manage-admin": "Manage admin",
             "crud": "CRUD User",
-            "crud-redux": "CRUD Redux",
+            "crud-redux": "Manage User from Redux",
             "clinic": "Clinics",
             "manage-clinic": "Manage Clinics",
             "specialty": "Specialties",

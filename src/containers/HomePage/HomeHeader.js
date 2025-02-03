@@ -37,22 +37,22 @@ class HomeHeader extends Component {
 
                         <div className='center-content'>
                             <div className='child-content'>
-                                <div><b> <FormattedMessage id="home-header.special" /></b></div>
-                                <div className='sub-title'><FormattedMessage id="home-header.finddoctor" /></div>
+                                <div><a href='#SPECIALTIES'> <FormattedMessage id="home-header.special" /></a></div>
+                                <div className='sub-title'><FormattedMessage id="home-header.finddoctor" /> </div>
 
                             </div>
                             <div className='child-content'>
-                                <div><b><FormattedMessage id="home-header.facility" /></b></div>
+                                <div><a href='#FACILITIES'><FormattedMessage id="home-header.facility" /></a></div>
                                 <div className='sub-title'><FormattedMessage id="home-header.select-room" /></div>
 
                             </div>
                             <div className='child-content'>
-                                <div><b><FormattedMessage id="home-header.doctor" /></b></div>
+                                <div><a href='#DOCTOROFTHEWEEK'><FormattedMessage id="home-header.doctor" /></a></div>
                                 <div className='sub-title'><FormattedMessage id="home-header.select-doctor" /></div>
 
                             </div>
                             <div className='child-content'>
-                                <div><b><FormattedMessage id="home-header.hand-book" /></b></div>
+                                <div><a href='#HANDBOOKS'><FormattedMessage id="home-header.hand-book" /></a></div>
                                 <div className='sub-title'><FormattedMessage id="home-header.general" /></div>
 
                             </div>

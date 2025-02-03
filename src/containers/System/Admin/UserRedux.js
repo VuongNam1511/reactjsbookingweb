@@ -224,7 +224,7 @@ class UserRedux extends Component {
         return (
             <div className='user-redux-container' >
                 <div className="title" >
-                    Check User Redux BookingCare
+                    Check User Redux
                 </div>
                 <div className='user-redux-body'>
                     <div className='container'>

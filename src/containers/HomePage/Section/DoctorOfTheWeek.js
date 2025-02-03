@@ -6,7 +6,7 @@ import * as actions from '../../../store/actions';
 import { iteratee } from 'lodash';
 import { LANGUAGES } from '../../../utils';
 import { withRouter } from 'react-router';
-
+import './DoctorOfTheWeek.scss'
 class DoctorOfTheWeek extends Component {
     constructor(props) {
         super(props)
@@ -38,7 +38,7 @@ class DoctorOfTheWeek extends Component {
         // arrDoctors = arrDoctors.concat(arrDoctors).concat(arrDoctors)
 
         return (
-            <div className='section-share section-doctor-otw '>
+            <div className='section-share section-doctor-otw ' id='DOCTOROFTHEWEEK'>
                 <div className='section-container'>
                     <div className='section-header'>
                         <span className='title-section'>
@@ -66,8 +66,9 @@ class DoctorOfTheWeek extends Component {
                                                 <div className='bg-img section-doctor-otw' style={{ backgroundImage: `url(${imageBase64})` }}>
                                                 </div>
                                                 <div className='position text-center'>
-                                                    <div>{language === LANGUAGES.VI ? nameVi : nameEn}</div>
-                                                    {/* <div>{item.address}</div> */}
+                                                    <div className='name-doctor'>{language === LANGUAGES.VI ? nameVi : nameEn}</div>
+                                                    <div className='address-doctor'>Địa chỉ: {item.address}</div>
+                                                    <div className='phone-doctor'>Số điện thoại: {item.phonenumber}</div>
                                                 </div>
                                             </div>
 

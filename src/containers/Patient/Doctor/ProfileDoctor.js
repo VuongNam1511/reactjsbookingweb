@@ -112,7 +112,7 @@ class ProfileDoctor extends Component {
                 {isShowLinkDetail === true &&
                     <div className='view-detail-doctor'>
                         {/* React-Router Link */}
-                        <Link to={`/detail-doctor/${doctorId}`}>Xem thêm</Link>
+                        <Link to={`/detail-doctor/${doctorId}`} style={{ color: '#20ac4a' }}> Xem thêm</Link>
                     </div>
                 }
 

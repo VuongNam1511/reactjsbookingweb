@@ -14,7 +14,7 @@
     "banner": {
         "title-1": "NỀN TẢNG Y TẾ",
         "title-2": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
-        "child-1": "Khám Chuyên Khoa",
+        "child-1": "Chuyên Khoa",
         "child-2": "Cơ sở ý tế",
         "child-3": "Bác sĩ",
         "child-4": "Cẩm nang"
@@ -25,7 +25,7 @@
             "manage-doctor": "Quản lý bác sĩ",
             "manage-admin": "Quản lý admin",
             "crud": "CRUD User",
-            "crud-redux": "CRUD Redux",
+            "crud-redux": "Quản lí người dùng bằng Redux",
             "clinic": "Phòng khám",
             "manage-clinic": "Quản lí phòng khám",
             "specialty": "Chuyên khoa",

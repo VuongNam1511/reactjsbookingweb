@@ -45,13 +45,27 @@
             justify-content: space-between;
             align-items: center;
 
+
             .child-content {
+                a {
+                    color: black;
+                    font-weight: 600;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #20ac4a;
+                        cursor: pointer;
+                    }
+                }
+
                 .sub-title {
                     font-weight: 400;
                     font-size: 14px;
                     color: gray;
-
                 }
+
+
+
             }
         }
 
