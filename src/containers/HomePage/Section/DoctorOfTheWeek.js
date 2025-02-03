@@ -52,6 +52,7 @@ class DoctorOfTheWeek extends Component {
                         <Slider {...this.props.settings}>
 
                             {arrDoctors && arrDoctors.length > 0 && arrDoctors.map((item, index) => {
+                                console.log('check item from: DOTW: ', item)
                                 let imageBase64 = '';
                                 if (item.image) {
                                     imageBase64 = new Buffer(item.image, 'base64').toString('binary');
@@ -66,7 +67,7 @@ class DoctorOfTheWeek extends Component {
                                                 </div>
                                                 <div className='position text-center'>
                                                     <div>{language === LANGUAGES.VI ? nameVi : nameEn}</div>
-                                                    <div>Da Liễu</div>
+                                                    {/* <div>{item.address}</div> */}
                                                 </div>
                                             </div>
 

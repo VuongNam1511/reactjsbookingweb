@@ -6,8 +6,8 @@
         "select-room": "Choose a Hospital or Clinic",
         "doctor": "Doctor",
         "select-doctor": "Choose a Good Doctor",
-        "fee": "Check-up Packages",
-        "general": "General Health Check-up",
+        "hand-book": "Handbook",
+        "general": "Health advice",
         "support-lan": "Support",
         "welcome": "Welcome, "
     },
@@ -15,11 +15,9 @@
         "title-1": "MEDICIAL FOUNDATION",
         "title-2": "COMPREHENSIVE HEALTH CARE",
         "child-1": "Specialized Examination",
-        "child-2": "Remote Examination",
-        "child-3": "General Examination",
-        "child-4": "Medical Tests",
-        "child-5": "Mental Health",
-        "child-6": "Dental Examination"
+        "child-2": "Medical Facility",
+        "child-3": "Doctor",
+        "child-4": "Handbook"
     },
     "menu": {
         "admin": {
@@ -56,7 +54,7 @@
         "edit": "Edit user"
     },
     "homepage": {
-        "doctor-of-the-week": "Doctor of the week",
+        "doctor-of-the-week": "Outstanding doctor",
         "more-infor": "More Infor...",
         "specialty-popular": "Popular Specialties"
     },

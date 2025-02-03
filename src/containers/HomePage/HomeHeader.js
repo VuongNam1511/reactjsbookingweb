@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss';
-import logo from '../../assets/images/bookingcare-2020.svg'
+import logo from '../../assets/images/logobcare.svg'
 import { FormattedMessage } from 'react-intl';
 import { LANGUAGES } from '../../utils';
 import { changeLanguageApp } from '../../store/actions';
@@ -30,7 +30,7 @@ class HomeHeader extends Component {
                 <div className='home-header-container'>
                     <div className='home-header-content'>
                         <div className='left-content'>
-                            <i className="fas fa-bars"></i>
+                            {/* <i className="fas fa-bars"></i> */}
                             <img className='header-logo' src={logo} onClick={() => this.returnToHome()} />
                             {/* <div className=''></div> */}
                         </div>
@@ -52,7 +52,7 @@ class HomeHeader extends Component {
 
                             </div>
                             <div className='child-content'>
-                                <div><b><FormattedMessage id="home-header.fee" /></b></div>
+                                <div><b><FormattedMessage id="home-header.hand-book" /></b></div>
                                 <div className='sub-title'><FormattedMessage id="home-header.general" /></div>
 
                             </div>
@@ -73,44 +73,32 @@ class HomeHeader extends Component {
                         <div className='content-top'>
                             <div className='title-1 '><FormattedMessage id="banner.title-1" /></div>
                             <div className='title-2 '><FormattedMessage id="banner.title-2" /></div>
-                            <div className='search '>
+                            {/* <div className='search '>
                                 <i className="fas fa-search"></i>
                                 <input type='text' placeholder='Tìm chuyên Khoa khám bệnh'></input>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className='content-bottom'>
                             <div className='options '>
                                 <div className='option-child'>
-                                    <div className='icon-child'><i className="far fa-hospital"></i></div>
+                                    <div className='icon-child'><i className="fas fa-notes-medical"></i></div>
                                     <div className='text-child'><FormattedMessage id="banner.child-1" /></div>
                                 </div>
                                 <div className='option-child'>
-                                    <div className='icon-child'><i className="fas fa-mobile-alt"></i></div>
+                                    <div className='icon-child'><i className="far fa-hospital"></i></div>
                                     <div className='text-child'><FormattedMessage id="banner.child-2" /></div>
                                 </div>
                                 <div className='option-child'>
-                                    <div className='icon-child'><i className="fas fa-notes-medical"></i></div>
+                                    <div className='icon-child'><i className="fas fa-user-md"></i></div>
                                     <div className='text-child'><FormattedMessage id="banner.child-3" /></div>
                                 </div>
                                 <div className='option-child'>
-                                    <div className='icon-child'><i className="fas fa-vial"></i></div>
+                                    <div className='icon-child'><i className="fas fa-id-card-alt"></i></div>
                                     <div className='text-child'><FormattedMessage id="banner.child-4" /></div>
                                 </div>
-                                <div className='option-child'>
-                                    <div className='icon-child'><i className="fas fa-user-md"></i></div>
-                                    <div className='text-child'><FormattedMessage id="banner.child-5" /></div>
-                                </div>
-                                <div className='option-child'>
-                                    <div className='icon-child'><i className="fas fa-id-card-alt"></i></div>
-                                    <div className='text-child'><FormattedMessage id="banner.child-6" /></div>
-                                </div>
-
 
                             </div>
-
-
-
 
                         </div>
 

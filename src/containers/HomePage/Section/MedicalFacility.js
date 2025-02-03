@@ -43,15 +43,22 @@ class MedicalFacility extends Component {
                         <Slider {...this.props.settings}>
                             {dataClinics && dataClinics.length > 0 &&
                                 dataClinics.map((item, index) => {
+                                    console.log('check item from: MF: ', item)
+
                                     return (
                                         <div className='section-customize clinic-child' key={index}
                                             onClick={() => this.handleViewDetailClinic(item)}
 
                                         >
-                                            <div className='bg-img section-medical-facility '
-                                                style={{ backgroundImage: `url(${item.image})` }}
-                                            > </div>
-                                            <div className='clinic-name'> {item.name} </div>
+                                            <div className='clinic-child-edit'>
+
+                                                <div className='bg-img section-medical-facility '
+                                                    style={{ backgroundImage: `url(${item.image})` }}
+                                                > </div>
+                                                <div className='clinic-name'> {item.name} </div>
+                                                <div className='clinic-address'> {item.address} </div>
+
+                                            </div>
                                         </div>
 
                                     )

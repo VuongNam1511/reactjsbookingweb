@@ -7,16 +7,16 @@ class About extends Component {
         return (
             <div className='section-share section-about '>
                 <div className='section-about-header'>
-                    Giới Thiệu về BookingCare
+                    Giới Thiệu về BCare+
                 </div>
                 <div className='section-about-content'>
                     <div className='content-left'>
-                        <iframe width="100%" height="400px" src="https://www.youtube.com/embed/OASGscJQXp0" title="BookingCare: Hệ thống đặt khám trực tuyến"
+                        <iframe width="100%" height="400px" src="https://www.youtube.com/embed/jPfBE2LagoI" title="BCare+: Hệ thống đặt khám trực tuyến"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                     </div>
                     <div className='content-right'>
-                        <p>VÌ SAO ĐẶT LỊCH KHÁM VỚI BOOKINGCARE</p>
+                        <p>VÌ SAO ĐẶT LỊCH KHÁM VỚI BCARE+</p>
 
                         <p>
                             1. Bác sĩ uy tín

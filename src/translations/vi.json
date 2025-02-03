@@ -6,8 +6,8 @@
         "select-room": "Chọn bệnh viện phòng khám",
         "doctor": "Bác sĩ",
         "select-doctor": "Chọn bác sĩ giỏi",
-        "fee": "Gói khám",
-        "general": "Khám sức khỏe tổng quát",
+        "hand-book": "Cẩm nang",
+        "general": "Lời khuyên về sức khỏe",
         "support-lan": "Hỗ trợ",
         "welcome": "Xin chào, "
     },
@@ -15,11 +15,9 @@
         "title-1": "NỀN TẢNG Y TẾ",
         "title-2": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
         "child-1": "Khám Chuyên Khoa",
-        "child-2": "Khám Từ Xa",
-        "child-3": "Khám tổng Quát",
-        "child-4": "Xét Nghiệm y Học",
-        "child-5": "Sức Khỏe Tinh Thấn",
-        "child-6": "Khám Nha Khoa"
+        "child-2": "Cơ sở ý tế",
+        "child-3": "Bác sĩ",
+        "child-4": "Cẩm nang"
     },
     "menu": {
         "admin": {
@@ -56,7 +54,7 @@
         "edit": "Lưu thay đổi"
     },
     "homepage": {
-        "doctor-of-the-week": "Bác Sĩ Nổi Bật Tuần Qua",
+        "doctor-of-the-week": "Bác Sĩ Nổi Bật ",
         "more-infor": "xem Thêm...",
         "specialty-popular": "Chuyên Khoa Phổ Biến"
     },

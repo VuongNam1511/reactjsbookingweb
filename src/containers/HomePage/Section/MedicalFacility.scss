@@ -1,11 +1,26 @@
 .clinic-child {
     cursor: pointer;
 
-    .clinic-name {
-        padding: 10px 0;
+    .clinic-child-edit {
+        width: 320px;
+        min-height: 280px;
+        background: white;
 
-        &:hover {
-            color: #49bce2;
+        .clinic-name {
+            padding: 10px;
+            background-color: white;
+            border-bottom: 1px solid rgb(240, 229, 229);
+            font-weight: 600;
+            font-size: 16px;
+
+            &:hover {
+                color: #20ac4a;
+            }
+        }
+
+        .clinic-address {
+            padding: 10px;
+            font-size: 12px;
         }
     }
 }
