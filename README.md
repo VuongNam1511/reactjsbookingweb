@@ -1,18 +1,51 @@
-Video Demo: https://youtu.be/5r1N9eUPbEE
-
 Preview:
 
 Giao diện phía User:
-![Screenshot_28-1-2025_142231_localhost](https://github.com/user-attachments/assets/b5938d34-52e1-4961-bf8c-ba72c156223d)
-![Screenshot_28-1-2025_14234_localhost](https://github.com/user-attachments/assets/30aa7e24-c7c3-4fea-8a4f-c8fbb757da63)
-![Screenshot_28-1-2025_142412_localhost](https://github.com/user-attachments/assets/265d5dd9-2942-4d72-b97f-6101640f1fc1)
-![Screenshot_28-1-2025_142535_localhost](https://github.com/user-attachments/assets/f3194a65-0347-44b1-9e25-6934856dc189)
-![Screenshot_28-1-2025_142514_localhost](https://github.com/user-attachments/assets/c41622ae-e8b4-4e36-8a72-9a1fd6f24c11)
-Giao diện phía Admin, Doctor:
-![S![Screenshot_28-1-2025_142719_localhost](https://github.com/user-attachments/assets/fddcdc66-56f1-47c9-83a6-440c242e849b)
-creenshot_28-1-2025_142629_localhost](https://github.com/user-attachments/assets/f3a76e71-3169-4439-87a8-e44a48142ec0)
-![Screenshot_28-1-2025_14274_localhost](https://github.com/user-attachments/assets/af4cd3a0-fd0a-4ded-a149-9937e7ab69e9)
-![Screenshot_28-1-2025_142733_localhost](https://github.com/user-attachments/assets/9d587e4a-df4f-4c5c-b780-40f885c195e9)
+
+Giao diện Trang Chủ:
+![trang chu 1](https://github.com/user-attachments/assets/433ad83e-d85d-4424-9628-2a9958c04a7b)
+![chuyen khoa](https://github.com/user-attachments/assets/f79cd48f-2ebc-4932-9791-b684bf6ae2a2)
+![co so](https://github.com/user-attachments/assets/cf943024-486b-47df-95da-328c88f1c5e4)
+![bac si](https://github.com/user-attachments/assets/bd5faea1-53c6-4081-a0f2-ab5fd3317d12)
+
+Giao diện đặt lịch khám bệnh:
+![datlich](https://github.com/user-attachments/assets/a4f6b97c-90f6-48a7-94e4-c5c642f1e3b2)
+
+
+Giao diện Trang chi tiết Chuyên Khoa: 
+![viem gan](https://github.com/user-attachments/assets/7179d629-db63-4973-9dc8-2ae9387000f0)
+
+Giao diện Trang Chi tiết Bác sĩ:
+![bsnam](https://github.com/user-attachments/assets/6cc9cc2d-aabd-4e91-825d-ec73a159ad96)
+
+Giao diện Trang Cơ sở ý tế: 
+![y te](https://github.com/user-attachments/assets/20397674-f1e7-444e-a5d3-03589b04a987)
+
+
+Giao diện phía Admin/Bác sĩ:
+
+Giao diện trang quản lí người dùng (admin)
+![qlnguoidung](https://github.com/user-attachments/assets/1c224a08-85ac-469b-aae0-b6147770c5e8)
+
+Giao diện trang quản lí bác sĩ (admin)
+![qlbacsi](https://github.com/user-attachments/assets/c2e8d591-a9cc-4918-854a-493b248cb7c8)
+
+Giao diện trang quản lí Kế hoạch khám bệnh của bác sĩ (admin/bác sĩ)
+![qlkehoach](https://github.com/user-attachments/assets/3f45adba-8102-4e89-81df-0a038d3ee432)
+
+Giao diện trang quản lí phòng khám (admin)
+![qlphonkha,](https://github.com/user-attachments/assets/633650f7-8b38-40d6-9fbf-ba8f0c60214c)
+
+Giao diện trang quản lí Cẩm nang (admin)
+![camnagn](https://github.com/user-attachments/assets/7525649c-b56b-4094-bac8-069accc44679)
+
+Giao diện quản lí chuyên Khoa giống giao diện quản lí Cẩm nang
+
+Giao diện Quản lí bệnh nhân đặt lịch khám bệnh (bác sĩ)
+![xacnhan](https://github.com/user-attachments/assets/ecb2e31c-546b-4a9c-9abb-f1ac18907654)
+![guibill](https://github.com/user-attachments/assets/8fb38b9d-56a0-4988-aa4a-b54280d3db40)
+
+
 
 
 
