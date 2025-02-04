@@ -36,6 +36,11 @@ Giao diện trang quản lí Kế hoạch khám bệnh của bác sĩ (admin/bá
 Giao diện trang quản lí phòng khám (admin)
 ![qlphonkha,](https://github.com/user-attachments/assets/633650f7-8b38-40d6-9fbf-ba8f0c60214c)
 
+Giao diện trang quản lí Cẩm nang (admin)
+![camnagn](https://github.com/user-attachments/assets/7525649c-b56b-4094-bac8-069accc44679)
+
+Giao diện quản lí chuyên Khoa giống giao diện quản lí Cẩm nang
+
 Giao diện Quản lí bệnh nhân đặt lịch khám bệnh (bác sĩ)
 ![xacnhan](https://github.com/user-attachments/assets/ecb2e31c-546b-4a9c-9abb-f1ac18907654)
 ![guibill](https://github.com/user-attachments/assets/8fb38b9d-56a0-4988-aa4a-b54280d3db40)
