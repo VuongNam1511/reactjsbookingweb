@@ -37,22 +37,22 @@ class HomeHeader extends Component {
 
                         <div className='center-content'>
                             <div className='child-content'>
-                                <div><a href='#SPECIALTIES'> <FormattedMessage id="home-header.special" /></a></div>
+                                <div><a href='#Specialty'> <FormattedMessage id="home-header.special" /></a></div>
                                 <div className='sub-title'><FormattedMessage id="home-header.finddoctor" /> </div>
 
                             </div>
                             <div className='child-content'>
-                                <div><a href='#FACILITIES'><FormattedMessage id="home-header.facility" /></a></div>
+                                <div><a href='#Facilities'><FormattedMessage id="home-header.facility" /></a></div>
                                 <div className='sub-title'><FormattedMessage id="home-header.select-room" /></div>
 
                             </div>
                             <div className='child-content'>
-                                <div><a href='#DOCTOROFTHEWEEK'><FormattedMessage id="home-header.doctor" /></a></div>
+                                <div><a href='#Doctors'><FormattedMessage id="home-header.doctor" /></a></div>
                                 <div className='sub-title'><FormattedMessage id="home-header.select-doctor" /></div>
 
                             </div>
                             <div className='child-content'>
-                                <div><a href='#HANDBOOKS'><FormattedMessage id="home-header.hand-book" /></a></div>
+                                <div><a href='#Handbooks'><FormattedMessage id="home-header.hand-book" /></a></div>
                                 <div className='sub-title'><FormattedMessage id="home-header.general" /></div>
 
                             </div>
@@ -82,7 +82,7 @@ class HomeHeader extends Component {
                         <div className='content-bottom'>
                             <div className='options '>
                                 <div className='option-child'>
-                                    <div className='icon-child'><i className="fas fa-notes-medical"></i></div>
+                                    <div className='icon-child'><i className="fas fa-notes-medical" ></i></div>
                                     <div className='text-child'><FormattedMessage id="banner.child-1" /></div>
                                 </div>
                                 <div className='option-child'>

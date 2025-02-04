@@ -101,6 +101,18 @@ const getDetailClinicById = (data) => {
     return axios.get(`/api/get-detail-clinic-by-id?id=${data.id}`)
 }
 
+const createNewHandBook = (data) => {
+    return axios.post('/api/create-new-handbook', data)
+}
+
+const getAllHandBook = () => {
+    return axios.get(`/api/get-all-handbook`)
+}
+
+const getDetailHandBookById = (data) => {
+    return axios.get(`/api/get-detail-handbook-by-id?id=${data.id}`)
+}
+
 const getAllPatientForDoctor = (data) => {
     return axios.get(`/api/get-list-patient-for-doctor?doctorId=${data.doctorId}&date=${data.date}`)
 }
@@ -115,5 +127,6 @@ export {
     getDetailInforDoctor, savePulkScheduleDoctor, getScheduleDoctorByDate,
     getExtraInforDoctorById, getProfileDoctorById, postPatientBookingAppointment,
     postVerifyBookAppointment, createNewSpecialty, getAllSpecialty, getDetailSpecialtyById,
-    createNewClinic, getAllClinic, getDetailClinicById, getAllPatientForDoctor, postSendRemery
+    createNewClinic, getAllClinic, getDetailClinicById, getAllPatientForDoctor, postSendRemery,
+    createNewHandBook, getAllHandBook, getDetailHandBookById,
 }

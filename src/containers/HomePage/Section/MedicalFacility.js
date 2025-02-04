@@ -33,10 +33,12 @@ class MedicalFacility extends Component {
     render() {
         let { dataClinics } = this.state;
         return (
-            <div className='section-share section-medical-facility ' id='FACILITIES'>
+            <div className='section-share section-medical-facility ' id='Facilities'>
                 <div className='section-container'>
                     <div className='section-header'>
-                        <span className='title-section'>Cơ Sở Y Tế Nổi Bật</span>
+                        <span className='title-section'>
+                            <FormattedMessage id="homepage.medical-facility" />
+                        </span>
                         <button className='btn-section'>Xem thêm...</button>
                     </div>
                     <div className='section-body'>

@@ -38,7 +38,7 @@ class DoctorOfTheWeek extends Component {
         // arrDoctors = arrDoctors.concat(arrDoctors).concat(arrDoctors)
 
         return (
-            <div className='section-share section-doctor-otw ' id='DOCTOROFTHEWEEK'>
+            <div className='section-share section-doctor-otw ' id='Doctors'>
                 <div className='section-container'>
                     <div className='section-header'>
                         <span className='title-section'>
