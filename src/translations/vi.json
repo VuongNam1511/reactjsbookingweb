@@ -2,32 +2,32 @@
     "home-header": {
         "special": "Chuyên Khoa",
         "finddoctor": "Tìm Bác Sĩ Chuyên Khoa",
-        "facility": "Cơ sở y tế",
+        "facility": "Phòng Khám",
         "select-room": "Chọn bệnh viện phòng khám",
-        "doctor": "Bác sĩ",
+        "doctor": "Bác Sĩ",
         "select-doctor": "Chọn bác sĩ giỏi",
-        "hand-book": "Cẩm nang",
+        "hand-book": "Cẩm Nang",
         "general": "Lời khuyên về sức khỏe",
         "support-lan": "Hỗ trợ",
         "welcome": "Xin chào, "
     },
     "banner": {
         "title-1": "NỀN TẢNG Y TẾ",
-        "title-2": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
+        "title-2": "ĐẶT LỊCH KHÁM BỆNH",
         "child-1": "Chuyên Khoa",
-        "child-2": "Cơ sở ý tế",
+        "child-2": "Phòng Khám",
         "child-3": "Bác sĩ",
         "child-4": "Cẩm nang"
     },
     "menu": {
         "admin": {
-            "manage-user": "Người dùng",
+            "manage-user": "Quản lý",
             "manage-doctor": "Quản lý bác sĩ",
             "manage-admin": "Quản lý admin",
             "crud": "CRUD User",
-            "crud-redux": "Quản lí người dùng bằng Redux",
+            "crud-redux": "Quản lý người dùng",
             "clinic": "Phòng khám",
-            "manage-clinic": "Quản lí phòng khám",
+            "manage-clinic": "Quản lý phòng khám",
             "specialty": "Chuyên khoa",
             "manage-specialty": "Quản lý chuyên khoa",
             "handbook": "Cẩm nang",
@@ -35,7 +35,7 @@
         },
         "doctor": {
             "manage-schedule": "Quản lý kê hoạch khám bệnh",
-            "manage-patient": "Quản lý bệnh nhân khám bệnh"
+            "manage-patient": "Danh sách bệnh nhân khám bệnh"
         }
     },
     "manage-user": {
@@ -58,7 +58,7 @@
         "more-infor": "xem Thêm...",
         "specialty-popular": "Chuyên Khoa Phổ Biến",
         "handbook-popular": "Cẩm nang",
-        "medical-facility": "Cơ Sở Y Tế Nổi Bật"
+        "medical-facility": "Danh Sách Phòng Khám"
     },
     "manage-schedule": {
         "title": "Quản lí kế hoạch khám bệnh của bác sĩ",
@@ -97,15 +97,15 @@
     },
     "admin": {
         "manage-doctor": {
-            "title": "Tạo Thêm Thông Tin Bác Sĩ ",
+            "title": "Quản lí Thông Tin Bác Sĩ ",
             "select-doctor": "Chọn bác sĩ",
             "introduction": "Thông tin giới thiệu",
             "add": "Tạo thông tin",
             "save": "Lưu thông tin",
             "price": "Giá khám bệnh",
             "payment": "Phương thức thanh toán",
-            "province": "Tỉnh thành",
-            "nameclinic": "Tên phòng khám",
+            "province": "Gói khám",
+            "nameclinic": "Tên cơ sở khám bệnh",
             "addressClinic": "Địa chỉ phòng khám",
             "note": "Ghi chú",
             "specialty": "Chọn chuyên khoa",

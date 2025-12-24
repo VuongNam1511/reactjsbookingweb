@@ -165,15 +165,15 @@ export const editAUser = (data) => {
             let res = await editUserService(data);
             // console.log('check Update user form Redux: ', res)
             if (res && res.errCode === 0) {
-                toast.success("Update a user Successed");
+                toast.success("Cập nhật thông tin người dùng thành công");
                 dispatch(editUserSuccess());
                 dispatch(fetchAllUsersStart());
             } else {
-                toast.error("Update a user failed");
+                toast.error("Đã xảy ra lỗi khi cập nhật thông tin người dùng");
                 dispatch(editUserFailed());
             }
         } catch (e) {
-            toast.error("Update a user failed");
+            toast.error("Đã xảy ra lỗi khi cập nhật thông tin người dùng");
             dispatch(editUserFailed());
             console.log('updateUserFailed error', e)
         }
@@ -279,15 +279,15 @@ export const saveDetailDoctor = (data) => {
         try {
             let res = await saveDetailDoctorService(data);
             if (res && res.errCode === 0) {
-                toast.success("Save Doctor Infor Successed");
+                toast.success("Lưu thông tin bác sĩ thành công");
 
                 dispatch({
                     type: actionTypes.SAVE_DETAIL_DOCTOR_SUCCESS,
                 })
             } else {
-                console.log('err res', res)
+                console.log('Vui lòng thử lại', res)
 
-                toast.error("Save Doctor Infor Error");
+                toast.error("Lỗi lưu thông tin bác sĩ");
 
                 dispatch({
                     type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED,

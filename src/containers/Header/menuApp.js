@@ -23,6 +23,8 @@ export const adminMenu = [
 
                 name: 'menu.doctor.manage-schedule', link: '/doctor/manage-schedule'
             },
+
+
         ]
     },
     { //Quản lý phòng khám

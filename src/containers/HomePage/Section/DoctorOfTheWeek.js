@@ -67,7 +67,7 @@ class DoctorOfTheWeek extends Component {
                                                 </div>
                                                 <div className='position text-center'>
                                                     <div className='name-doctor'>{language === LANGUAGES.VI ? nameVi : nameEn}</div>
-                                                    <div className='address-doctor'>Địa chỉ: {item.address}</div>
+                                                    {/* <div className='address-doctor'>Địa chỉ: {item.address}</div> */}
                                                     <div className='phone-doctor'>Số điện thoại: {item.phonenumber}</div>
                                                 </div>
                                             </div>

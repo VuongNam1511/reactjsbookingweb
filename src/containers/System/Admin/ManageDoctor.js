@@ -326,7 +326,7 @@ class ManageDoctor extends Component {
                             name="selectedPrice"
                         />
                     </div>
-                    <div className='col-4 form-group'>
+                    {/* <div className='col-4 form-group'>
                         <label>
                             <FormattedMessage id="admin.manage-doctor.payment"></FormattedMessage>
 
@@ -338,7 +338,7 @@ class ManageDoctor extends Component {
                             placeholder={<FormattedMessage id="admin.manage-doctor.payment"></FormattedMessage>}
                             name="selectedPayment"
                         />
-                    </div>
+                    </div> */}
                     <div className='col-4 form-group'>
                         <label>
                             <FormattedMessage id="admin.manage-doctor.province"></FormattedMessage>

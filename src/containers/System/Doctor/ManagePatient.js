@@ -61,6 +61,7 @@ class ManagePatient extends Component {
         let data = {
             doctorId: item.doctorId,
             patientId: item.patientId,
+            statusId: item.statusId,
             email: item.patientData.email,
             timeType: item.timeType,
             patientName: item.patientData.firstName
@@ -86,18 +87,19 @@ class ManagePatient extends Component {
             imgBase64: dataChild.imgBase64,
             doctorId: dataModal.doctorId,
             patientId: dataModal.patientId,
+            statusId: dataModal.statusId,
             timeType: dataModal.timeType,
             language: this.props.language,
             patientName: dataModal.patientName
         });
         if (res && res.errCode === 0) {
-            toast.success('Send Remedy succeeds');
+            toast.success('Bệnh nhân đã được xác nhận khám xong');
             this.closeRemedyModal();
             await this.getDataPatient();
 
         } else {
-            toast.error('something wrongs...!');
-            console.log('error send Remedy: ', res)
+            toast.error('có lỗi, vui lòng thử lại...!');
+            console.log('đã xảy ra lỗi: ', res)
         }
     }
 
@@ -111,7 +113,7 @@ class ManagePatient extends Component {
 
                 <div className='manage-patient-container'>
                     <div className='manage-patient-title'>
-                        Quản Lý Bệnh Nhân Khám Bệnh
+                        Danh Sách Bệnh Nhân Khám Bệnh
                     </div>
                     <div className='manage-patient-body row'>
                         <div className='col-4 form-group'>
@@ -132,13 +134,21 @@ class ManagePatient extends Component {
                                         <th>Địa chỉ</th>
                                         <th>Giới tính</th>
                                         <th>Trạng thái</th>
+                                        <th>Chức năng</th>
+                                        {/* <th>Bệnh án</th> */}
                                     </tr>
                                     {dataPatient && dataPatient.length > 0 ?
                                         dataPatient.map((item, index) => {
                                             let time = language === LANGUAGES.VI ?
                                                 item.timeTypeDataPatient.valueVi : item.timeTypeDataPatient.valueEn;
                                             let gender = language === LANGUAGES.VI ?
-                                                item.patientData.genderData.valueVi : item.patientData.genderData.valueEn
+                                                item.patientData.genderData.valueVi : item.patientData.genderData.valueEn;
+                                            let status = language === LANGUAGES.VI ?
+                                                item.statusDataPatient.valueVi : item.statusDataPatientDataPatient.valueEn;
+
+
+
+
                                             return (
                                                 <tr key={index}>
                                                     <td>{index + 1}</td>
@@ -146,18 +156,20 @@ class ManagePatient extends Component {
                                                     <td>{item.patientData.firstName}</td>
                                                     <td>{item.patientData.address}</td>
                                                     <td>{gender}</td>
+                                                    <td>{status}</td>
                                                     <td>
                                                         <button className='mp-btn-confirm'
                                                             onClick={() => this.handleBtnConfirm(item)}
                                                         >Xác nhận</button>
                                                     </td>
+                                                    {/* <td>{status}</td> */}
 
                                                 </tr>
 
                                             )
                                         })
                                         : <tr>
-                                            <td colSpan={6} style={{ textAlign: 'center' }}>No data</td>
+                                            <td colSpan={6} style={{ textAlign: 'center' }}>bác sĩ chưa có bệnh nhân nào khám trong ngày</td>
                                         </tr>
                                     }
                                 </tbody>

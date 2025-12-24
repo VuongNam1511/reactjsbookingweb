@@ -65,7 +65,7 @@ class RemedyModal extends Component {
                 centered
             >
                 <div className="modal-header">
-                    <h5 className="modal-title">Gửi hóa đơn khám bệnh thành công</h5>
+                    <h5 className="modal-title">Xác nhận bệnh nhân khám bệnh </h5>
                     <button type="button" className="close" aria-label="Close"
                         onClick={closeRemedyModal}
                     >
@@ -81,20 +81,20 @@ class RemedyModal extends Component {
                             ></input>
                         </div>
                         <div className='col-6 form-group'>
-                            <label>upload file hóa đơn</label>
-                            <input className='form-control-file' type='file'
+                            <label> </label>
+                            {/* <input className='form-control-file' type='file'
                                 onChange={(event) => this.handleOnChangeImage(event)}
-                            ></input>
+                            ></input> */}
                         </div>
 
                     </div>
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={() => this.handleSendRemery()}>
-                        Send
+                        Xác nhận
                     </Button>{' '}
                     <Button color="secondary" onClick={closeRemedyModal}>
-                        Cancel
+                        Đóng
                     </Button>
                 </ModalFooter>
             </Modal>

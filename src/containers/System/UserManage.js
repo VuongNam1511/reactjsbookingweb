@@ -134,25 +134,25 @@ class UserManage extends Component {
                         editUser={this.doEditUser}
                     />
                 }
-                <div className='title text-center'> Manage users </div>
-                <div className='mx-1'>
+                <div className='title text-center'>Chào mừng đến với giao diện quản lý</div>
+                {/* <div className='mx-1'>
                     <button
                         className='btn btn-primary px-3'
                         onClick={() => this.handleAddNewUser()}
-                    ><i className="fas fa-plus px-1"></i>Add new user</button>
-                </div>
+                    ><i className="fas fa-plus px-1"></i></button>
+                </div> */}
                 <div className='users-table mt-3 mx-1'>
                     <table id="customers">
                         <tbody>
-                            <tr>
+                            {/* <tr>
                                 <th>Email</th>
                                 <th>Firstname</th>
                                 <th>Lastname</th>
                                 <th>Address</th>
                                 <th>Action</th>
-                            </tr>
+                            </tr> */}
 
-                            {arrUsers && arrUsers.map((item, index) => {
+                            {/* {arrUsers && arrUsers.map((item, index) => {
                                 return (
                                     <tr key={index}>
                                         <td>{item.email}</td>
@@ -168,7 +168,7 @@ class UserManage extends Component {
                                 )
                             })
 
-                            }
+                            } */}
                         </tbody>
 
                     </table>

@@ -51,7 +51,7 @@ class DetailSpecialty extends Component {
                         keyMap: "ALL",
                         type: "PROVINCE",
                         valueEn: "ALL",
-                        valueVi: "Toàn quốc"
+                        valueVi: "Tất cả gói khám"
                     })
                 }
                 this.setState({

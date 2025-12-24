@@ -89,7 +89,7 @@ class ManageClinic extends Component {
                 </div>
                 <div className='add-new-specialty row'>
                     <div className='col-6 form-group'>
-                        <label>Tên phòng khám</label>
+                        <label>Tên cơ sở khám bệnh</label>
                         <input className='form-control' type='text' value={this.state.name}
                             onChange={(event) => this.handleOnChangeInput(event, 'name')}
                         ></input>

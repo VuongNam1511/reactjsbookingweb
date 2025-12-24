@@ -224,7 +224,7 @@ class UserRedux extends Component {
         return (
             <div className='user-redux-container' >
                 <div className="title" >
-                    Check User Redux
+                    QUẢN LÝ NGƯỜI DÙNG
                 </div>
                 <div className='user-redux-body'>
                     <div className='container'>
