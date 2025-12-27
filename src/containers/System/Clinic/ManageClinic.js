@@ -66,7 +66,7 @@ class ManageClinic extends Component {
 
         let res = await createNewClinic(this.state)
         if (res && res.errCode === 0) {
-            toast.success('Add new Clinic succeed!')
+            toast.success('Thêm phòng khám bệnh thành công')
             this.setState({
                 name: '',
                 imageBase64: '',
@@ -89,7 +89,7 @@ class ManageClinic extends Component {
                 </div>
                 <div className='add-new-specialty row'>
                     <div className='col-6 form-group'>
-                        <label>Tên cơ sở khám bệnh</label>
+                        <label>Tên phòng khám</label>
                         <input className='form-control' type='text' value={this.state.name}
                             onChange={(event) => this.handleOnChangeInput(event, 'name')}
                         ></input>

@@ -60,7 +60,7 @@ class Header extends Component {
                         VN</span>
                     <span className={language === LANGUAGES.EN ? "language-en active" : "language-en"}
                         onClick={() => this.handleChangeLanguage(LANGUAGES.EN)}>
-                    </span>
+                        EN</span>
 
                     {/* nút logout */}
                     <div className="btn btn-logout" onClick={processLogout} title='Log out' >

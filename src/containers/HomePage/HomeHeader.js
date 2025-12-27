@@ -7,12 +7,23 @@ import { LANGUAGES } from '../../utils';
 import { changeLanguageApp } from '../../store/actions';
 import { withRouter } from 'react-router';
 
-
 class HomeHeader extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOpenModal: false, // Trạng thái đóng mở modal
+        }
+    }
+
+    // Hàm đóng/mở modal
+    toggleSupportModal = () => {
+        this.setState({
+            isOpenModal: !this.state.isOpenModal
+        });
+    }
 
     changeLanguage = (language) => {
         this.props.changeLanguageAppRedux(language)
-        // fire redux even : actions
     }
 
     returnToHome = () => {
@@ -23,17 +34,16 @@ class HomeHeader extends Component {
 
     render() {
         let language = this.props.language;
-        // console.log('check language', language)
+        let { isOpenModal } = this.state;
 
         return (
             <React.Fragment>
                 <div className='home-header-container'>
                     <div className='home-header-content'>
                         <div className='left-content'>
-                            {/* <i className="fas fa-bars"></i> */}
-                            <img className='header-logo' src={logo} onClick={() => this.returnToHome()} />
-                            {/* <div className=''></div> */}
+                            <img className='header-logo' src={logo} onClick={() => this.returnToHome()} alt="logo" />
                         </div>
+
 
                         <div className='center-content'>
                             <div className='child-content'>
@@ -59,16 +69,49 @@ class HomeHeader extends Component {
                         </div>
 
                         <div className='right-content'>
-                            <div className='support'><i className="fas fa-question-circle"></i><FormattedMessage id="home-header.support-lan" /> </div>
-                            <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}><span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN</span></div>
-                            <div className={language === LANGUAGES.EN ? 'language-en active' : 'language-en'}><span onClick={() => this.changeLanguage(LANGUAGES.EN)}></span></div>
+                            {/* THÊM SỰ KIỆN ONCLICK TẠI ĐÂY */}
+                            <div className='support' onClick={() => this.toggleSupportModal()}>
+                                <i className="fas fa-question-circle"></i>
+                                <FormattedMessage id="home-header.support-lan" />
+                            </div>
 
+                            <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}>
+                                <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN</span>
+                            </div>
+                            <div className={language === LANGUAGES.EN ? 'language-en active' : 'language-en'}>
+                                <span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span>
+                            </div>
                         </div>
-
                     </div>
                 </div>
-                {this.props.isShowBanner === true &&
 
+                {/* MODAL THÔNG TIN HỖ TRỢ */}
+                {isOpenModal && (
+                    <div className="support-modal-overlay" onClick={this.toggleSupportModal}>
+                        <div className="support-modal-content" onClick={(e) => e.stopPropagation()}>
+                            <div className="modal-header">
+                                <h3><FormattedMessage id="home-header.support-lan" /></h3>
+                                <span className="close-icon" onClick={this.toggleSupportModal}>&times;</span>
+                            </div>
+                            <div className="modal-body">
+                                <div className="contact-item">
+                                    <i className="fas fa-phone"></i>
+                                    <span><strong>Hotline:</strong> 0123 456 789</span>
+                                </div>
+                                <div className="contact-item">
+                                    <i className="fas fa-envelope"></i>
+                                    <span><strong>Email:</strong> support@datlichkhambenh.com</span>
+                                </div>
+                                <div className="contact-item">
+                                    <i className="fas fa-map-marker-alt"></i>
+                                    <span><strong>Địa chỉ:</strong> Số 1, Cao Lỗ, Xã Đông Anh, TP Hà Nội</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {this.props.isShowBanner === true && (
                     <div className='home-header-banner'>
                         <div className='content-top'>
                             <div className='title-1 '><FormattedMessage id="banner.title-1" /></div>
@@ -103,12 +146,13 @@ class HomeHeader extends Component {
                         </div>
 
                     </div>
-                }
+                )}
             </React.Fragment>
         );
     }
-
 }
+
+// ... Giữ nguyên mapStateToProps và mapDispatchToProps ...
 
 const mapStateToProps = state => {
     return {

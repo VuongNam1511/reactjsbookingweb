@@ -1,0 +1,151 @@
+.home-footer-container {
+    background-color: #f8f9fa; // Màu nền xám nhẹ chuyên nghiệp
+    border-top: 1px solid #ddd;
+    padding-top: 40px;
+    margin-top: 50px;
+
+    .home-footer-content {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 30px;
+
+        .content-left {
+            width: 40%;
+            margin-top: 15px;
+
+            .hospital-name {
+                font-weight: 700;
+                font-size: 18px;
+                color: #20ac4a;
+                margin-bottom: 15px;
+            }
+
+            .hospital-info {
+                color: #555;
+                font-size: 14px;
+
+                p {
+                    margin-bottom: 8px;
+
+                    i {
+                        width: 20px;
+                        color: #20ac4a;
+                    }
+                }
+            }
+        }
+
+        .content-center {
+            width: 25%;
+
+            .title {
+                font-weight: 700;
+                margin-bottom: 15px;
+                color: #333;
+                margin-left: -45px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin-bottom: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: #666;
+                        font-size: 14px;
+
+                        &:hover {
+                            color: #20ac4a;
+                        }
+                    }
+                }
+            }
+        }
+
+        .content-right {
+            width: 25%;
+
+            .title {
+                font-weight: 700;
+                margin-bottom: 15px;
+                margin-left: -90px;
+            }
+
+            .contact-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+
+                .contact-icon {
+                    width: 35px;
+                    height: 35px;
+                    background: #20ac4a;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    margin-right: 10px;
+                }
+
+                .contact-text {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 14px;
+
+                    b {
+                        color: #333;
+                    }
+                }
+            }
+
+            .social-icons {
+                margin-top: 20px;
+                font-size: 24px;
+                color: #666;
+
+                i {
+                    margin-right: 15px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #20ac4a;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        background-color: #efefef;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 13px;
+        color: #888;
+
+        a {
+            color: #20ac4a;
+            text-decoration: none;
+        }
+    }
+}
+
+// Responsive cho di động
+@media (max-width: 768px) {
+    .home-footer-content {
+        flex-direction: column;
+        padding: 0 20px;
+
+        .content-left,
+        .content-center,
+        .content-right {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+}
