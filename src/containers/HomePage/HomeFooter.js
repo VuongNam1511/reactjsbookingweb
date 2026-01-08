@@ -10,7 +10,7 @@ class HomeFooter extends Component {
                 <div className='home-footer-content'>
                     <div className='content-left'>
                         <div className='footer-logo'></div>
-                        <div className='hospital-name'>BỆNH VIỆN ĐA KHOA ĐÔNG ANH</div>
+                        <div className='hospital-name'>ĐẶT LỊCH KHÁM BỆNH VIỆN ĐA KHOA ĐÔNG ANH</div>
                         <div className='hospital-info'>
                             <p><i className="fas fa-map-marker-alt"></i> Số 1, Cao Lỗ, Xã Đông Anh, TP Hà Nội</p>
                             <p><i className="fas fa-check"></i> ĐKKD số: 0102030405 do Sở Kế hoạch Đầu tư Hà Nội cấp</p>
@@ -52,7 +52,7 @@ class HomeFooter extends Component {
                 </div>
 
                 <div className='footer-bottom'>
-                    <p>Copyright &copy; 2025 Bệnh viện Đa Khoa Đông Anh. All rights reserved. <a href='#'>Design by Vương Văn Nam K66CNPMA</a></p>
+                    <p>Copyright &copy; 2025 Đặt Lịch Khám Bệnh viện Đa Khoa Đông Anh. All rights reserved. <a href='#'>Design by Vương Văn Nam K66CNPMA</a></p>
                 </div>
             </div>
         );
